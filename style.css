@@ -1,28 +1,56 @@
-users:before{
-    border: 3px dotted blue;
+library{
+    /*border: 3px dotted red;*/
     margin: auto;
-    display: block;
-    content: "Biblioteka: ";
+    width: 720px;
+    height: 400px;
+
     font-weight: bold;
-    font-size: 200%;
-    color: rgb(53, 53, 110);
+    background-color: cadetblue;
 }
-users customers:before{
+library:before{
+    margin: 5px 5px 5px 5px;
+    font-weight: bold;
+    color: plum;
+    content: "Biblioteka: ";
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*users{*/
+/*   */
+/*    !*border: 3px dotted blue;*!*/
+/*    !*margin: 5px 5px 5px 5px;*!*/
+/*    !*max-width: 50%;*!*/
+/*    !*max-height: 50%;*!*/
+/*    !*display: block;*!*/
+/*    !*!*content: "Biblioteka: ";*!*!*/
+/*    !*font-weight: bold;*!*/
+/*    !*font-size: 200%;*!*/
+/*    !*color: rgb(53, 53, 110);*!*/
+/*}*/
+customers:before{
     display: table;
-    float: left;
     content: "Czytelnicy: ";
     font-weight: bold;
     font-size: 200%;
     color: rgb(33, 128, 96);
     margin: 5px 10px 5px 5px;
 }
+users,publishers,books,authors,borrowings{
+    float:left;
+    border-radius: 5%;
+    background: #DAF7A6;
+    margin: 10px 10px 10px 10px;
+}
+
 users librarians:before{
     display: table;
-    float: left;
     content: "Bibliotekarze: ";
     font-weight: bold;
     font-size: 200%;
-    color: darksalmon;
+    color: #8e5164;
     margin: 5px 10px 5px 5px;
 }
 
@@ -32,17 +60,17 @@ users customer:before{
     font-weight: bold;
     font-size: 130%;
     color: darkviolet;
-    margin: 5px 5px 5px 5px;
+
 }
 customer address:before, librarian address:before{
     display: block;
     content: "Adres: ";
     font-weight: bold;
     font-size: 130%;
-    color: rgb(39,528, 73);
+    color: #BECA11;
 }
 address street:before,address city:before,address country:before{
-    color: cornflowerblue;
+    color: #1130CA;
     font-size: 110%;
     font-style: italic;
 
@@ -110,19 +138,47 @@ users librarian:before{
     color: rgb(13, 78, 96);
     margin: 5px 5px 5px 5px;
 }
+/*author:before,author,author:after{*/
+
+/*    background: #6FDED3;*/
+/*    background-clip: content-box;*/
+/*}*/
+/*customer:before,customer,customer:after{*/
+
+/*    background: #6FDED3;*/
+/*    background-clip: content-box;*/
+/*}*/
+/*librarian:before,librarian,librarian:after{*/
+
+/*    background: #6FDED3;*/
+/*    background-clip: content-box;*/
+/*}*/
+/*publisher:before,publisher,publisher:after{*/
+
+/*    background: #6FDED3;*/
+/*    background-clip: content-box;*/
+/*}*/
+/*book:before,book,book:after{*/
+
+/*    background: #6FDED3;*/
+/*    background-clip: content-box;*/
+/*}*/
+/*address:before,address,address:after{*/
+
+/*    background: #6FDED3;*/
+/*    background-clip: content-box;*/
+/*}*/
 
 publishers:before{
-    border:3px dotted blue;
     margin: auto;
     display: block;
     content: "Wydawnictwo: ";
     font-weight: bold;
     font-size: 200%;
-    color: rgb(53, 53, 110);
+    color: #11CAB7;
 }
 publisher:before{
     display: table;
-    float: left;
     content: "Id Wydawnictwa: " attr(publisher_id);
     font-weight: bold;
     font-size: 130%;
@@ -144,7 +200,7 @@ publisher name:before{
     content: "Nazwa: ";
 }
 publisher country:before{
-    content: "Nazwisko: ";
+    content: "Kraj: ";
 }
 
 authors:before{
@@ -152,11 +208,12 @@ authors:before{
     content: "Autorzy: ";
     font-weight: bold;
     font-size: 200%;
-    color: rgb(53, 53, 110);
+    color: #CA11BE;
 }
+
+
 author:before{
     display: table;
-    float: left;
     content: "Id Autora: " attr(author_id);
     font-weight: bold;
     font-size: 130%;
@@ -164,7 +221,7 @@ author:before{
     margin: 5px 10px 5px 5px;
 }
 
-author name:before,author lastname:after,author country:before{
+author firstname:before,author lastname:before,author country:before{
     color: brown;
     font-size: 110%;
     font-style: italic;
@@ -173,7 +230,6 @@ author name:before,author lastname:after,author country:before{
 author firstname:after,author lastname:after,author country:after{
     content: "\A";
     white-space: pre;
-
 }
 author firstname:before{
     content: "Imie: ";
@@ -190,11 +246,10 @@ books:before{
     content: "Ksiazki: ";
     font-weight: bold;
     font-size: 200%;
-    color: rgb(53, 53, 110);
+    color: #CA1811;
 }
 book:before{
     display: table;
-    float: left;
     content: "Id Ksiazki: " attr(book_id);
     font-weight: bold;
     font-size: 130%;

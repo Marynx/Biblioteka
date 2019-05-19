@@ -1,0 +1,42 @@
+<!ENTITY % address "street,city,country">
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT customers (customer+)>
+<!ELEMENT librarians (librarian+)>
+<!ELEMENT librarian (firstname,lastname,phone,address)>
+<!ELEMENT customer (firstname,lastname,phone,address)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT address (%address;)>
+<!ATTLIST customer customer_id ID #REQUIRED>
+<!ATTLIST librarian librarian_id ID #REQUIRED>
+<!ELEMENT publishers (publisher+)>
+<!ELEMENT publisher (name,country)>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST publisher publisher_id ID #REQUIRED>
+<!ELEMENT authors (author+)>
+<!ELEMENT author (firstname,lastname,country)>
+<!ATTLIST author author_id ID #REQUIRED>
+<!ELEMENT books (book+)>
+<!ELEMENT book (title,pages,year,isbn,book_publisher,book_author)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT pages (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT isbn (#PCDATA)>
+<!ELEMENT book_publisher (#PCDATA)>
+<!ELEMENT book_author (#PCDATA)>
+<!ATTLIST book book_id ID #REQUIRED>
+<!ATTLIST book_publisher pub_id IDREF #REQUIRED>
+<!ATTLIST book_author aut_id IDREF #REQUIRED>
+<!ELEMENT borrowings (borrowing+)>
+<!ELEMENT borrowing (borrowed_book,borrowing_user,worker)>
+<!ELEMENT borrowed_book (#PCDATA)>
+<!ELEMENT borrowing_user (#PCDATA)>
+<!ELEMENT worker (#PCDATA)>
+<!ATTLIST worker id_librarian IDREF #REQUIRED>
+<!ATTLIST borrowing_user id_user IDREF #REQUIRED>
+<!ATTLIST borrowed_book id_book IDREF #REQUIRED>
+
+
