@@ -1,0 +1,234 @@
+users:before{
+    border: 3px dotted blue;
+    margin: auto;
+    display: block;
+    content: "Biblioteka: ";
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(53, 53, 110);
+}
+users customers:before{
+    display: table;
+    float: left;
+    content: "Czytelnicy: ";
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(33, 128, 96);
+    margin: 5px 10px 5px 5px;
+}
+users librarians:before{
+    display: table;
+    float: left;
+    content: "Bibliotekarze: ";
+    font-weight: bold;
+    font-size: 200%;
+    color: darksalmon;
+    margin: 5px 10px 5px 5px;
+}
+
+users customer:before{
+    display: block;
+    content: "Id Czytelnika: " attr(customer_id);
+    font-weight: bold;
+    font-size: 130%;
+    color: darkviolet;
+    margin: 5px 5px 5px 5px;
+}
+customer address:before, librarian address:before{
+    display: block;
+    content: "Adres: ";
+    font-weight: bold;
+    font-size: 130%;
+    color: rgb(39,528, 73);
+}
+address street:before,address city:before,address country:before{
+    color: cornflowerblue;
+    font-size: 110%;
+    font-style: italic;
+
+}
+
+address street:after,address city:after,address country:after{
+    content: "\A";
+    white-space: pre;
+
+}
+address street:before{
+    content: "Ulica: ";
+}
+address city:before{
+    content: "Miasto: ";
+}
+address country:before{
+    content: "Kraj: ";
+}
+
+customer firstname:before,customer lastname:before,customer phone:before{
+     color: brown;
+     font-size: 110%;
+     font-style: italic;
+ }
+customer firstname:after,customer lastname:after,customer phone:after{
+    content: "\A";
+    white-space: pre;
+
+}
+customer firstname:before{
+    content: "Imie: ";
+}
+customer lastname:before{
+    content: "Nazwisko: ";
+}
+customer phone:before{
+    content: "Numer telefonu: ";
+}
+librarian firstname:before,librarian lastname:before,librarian phone:before{
+    color: brown;
+    font-size: 110%;
+    font-style: italic;
+}
+librarian firstname:after,librarian lastname:after,librarian phone:after{
+    content: "\A";
+    white-space: pre;
+
+}
+librarian firstname:before{
+    content: "Imie: ";
+}
+librarian lastname:before{
+    content: "Nazwisko: ";
+}
+librarian phone:before{
+    content: "Numer telefonu: ";
+}
+
+users librarian:before{
+    display: block;
+    content: "Id Bibliotekarza: " attr(librarian_id);
+    font-weight: bold;
+    font-size: 130%;
+    color: rgb(13, 78, 96);
+    margin: 5px 5px 5px 5px;
+}
+
+publishers:before{
+    border:3px dotted blue;
+    margin: auto;
+    display: block;
+    content: "Wydawnictwo: ";
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(53, 53, 110);
+}
+publisher:before{
+    display: table;
+    float: left;
+    content: "Id Wydawnictwa: " attr(publisher_id);
+    font-weight: bold;
+    font-size: 130%;
+    color: darkviolet;
+    margin: 5px 10px 5px 5px;
+}
+publisher name:before,publisher country:before{
+    color: brown;
+    font-size: 110%;
+    font-style: italic;
+
+}
+publisher name:after,publisher country:after{
+    content: "\A";
+    white-space: pre;
+
+}
+publisher name:before{
+    content: "Nazwa: ";
+}
+publisher country:before{
+    content: "Nazwisko: ";
+}
+
+authors:before{
+    display: block;
+    content: "Autorzy: ";
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(53, 53, 110);
+}
+author:before{
+    display: table;
+    float: left;
+    content: "Id Autora: " attr(author_id);
+    font-weight: bold;
+    font-size: 130%;
+    color: darkviolet;
+    margin: 5px 10px 5px 5px;
+}
+
+author name:before,author lastname:after,author country:before{
+    color: brown;
+    font-size: 110%;
+    font-style: italic;
+
+}
+author firstname:after,author lastname:after,author country:after{
+    content: "\A";
+    white-space: pre;
+
+}
+author firstname:before{
+    content: "Imie: ";
+}
+author lastname:before{
+    content: "Nazwisko: ";
+}
+author country:before{
+    content: "Kraj Pochodzenia: ";
+}
+
+books:before{
+    display: block;
+    content: "Ksiazki: ";
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(53, 53, 110);
+}
+book:before{
+    display: table;
+    float: left;
+    content: "Id Ksiazki: " attr(book_id);
+    font-weight: bold;
+    font-size: 130%;
+    color: darkviolet;
+    margin: 5px 10px 5px 5px;
+}
+book title:before,book pages:before,book year:before,book isbn:before{
+    color: brown;
+    font-size: 110%;
+    font-style: italic;
+
+}
+book title:after,book pages:after,book year:after,book isbn:after{
+    content: "\A";
+    white-space: pre;
+
+}
+book title:before{
+    content: "Tytul: ";
+}
+book pages:before{
+    content: "Ilosc Stron: ";
+}
+book year:before{
+    content: "Rok Wydania: ";
+}
+book isbn:before{
+    content: "ISBN: ";
+}
+
+borrowings:before{
+    display: block;
+    content: "Wypozyczenia: ";
+    font-weight: bold;
+    font-size: 200%;
+    color: rgb(53, 53, 110);
+}
