@@ -40,5 +40,5 @@
 <!ATTLIST borrowing_user id_user IDREF #REQUIRED>
 <!ATTLIST borrowed_book id_book IDREF #REQUIRED>
 <!ELEMENT users (customers,librarians)>
-<!ELEMENT library (users,publishers,authors,books,borrowings)
+<!ELEMENT library (users,publishers,authors,books,borrowings)>
 

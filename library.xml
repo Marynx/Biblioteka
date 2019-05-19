@@ -4,7 +4,7 @@
 <library>
     <users>
         <customers>
-        <customer customer_id="223123">
+        <customer customer_id="A223123">
             <firstname>Darek</firstname>
             <lastname>Raciborek</lastname>
             <phone>123123123</phone>
@@ -14,7 +14,7 @@
                 <country>Polska</country>
             </address>
         </customer>
-        <customer customer_id="434321">
+        <customer customer_id="A434321">
             <firstname>Darek</firstname>
             <lastname>Raciborek</lastname>
             <phone>123123123</phone>
@@ -26,7 +26,7 @@
         </customer>
         </customers>
         <librarians>
-        <librarian librarian_id="1232">
+        <librarian librarian_id="A1232">
             <firstname>Jan</firstname>
             <lastname>Kowal</lastname>
             <phone>321321321</phone>
@@ -36,7 +36,7 @@
                 <country>Polska</country>
             </address>
         </librarian>
-        <librarian librarian_id="1212">
+        <librarian librarian_id="A1212">
             <firstname>Anna</firstname>
             <lastname>Nowak</lastname>
             <phone>989809900</phone>
@@ -49,15 +49,15 @@
         </librarians>
     </users>
     <publishers>
-        <publisher publisher_id="12A">
+        <publisher publisher_id="A12A">
             <name>Muza</name>
             <country>Polska</country>
         </publisher>
-        <publisher publisher_id="14A">
+        <publisher publisher_id="A14A">
             <name>Greg</name>
             <country>Polska</country>
         </publisher>
-        <publisher publisher_id="16A">
+        <publisher publisher_id="A16A">
             <name>W.A.B</name>
             <country>Rosja</country>
         </publisher>
@@ -80,47 +80,47 @@
         </author>
     </authors>
     <books>
-        <book book_id="12345">
+        <book book_id="A12345">
             <title>Zbrodnia i Kara</title>
             <pages>400</pages>
             <year>2008</year>
             <isbn>12312312312</isbn>
-            <book_publisher pub_id="12A"></book_publisher>
+            <book_publisher pub_id="A12A"></book_publisher>
             <book_author aut_id="FIO"></book_author>
         </book>
-        <book book_id="12346">
+        <book book_id="A12346">
             <title>Lolita</title>
             <pages>416</pages>
             <year>2012</year>
             <isbn>12312312345</isbn>
-            <book_publisher pub_id="14A"></book_publisher>
+            <book_publisher pub_id="A14A"></book_publisher>
             <book_author aut_id="VLA"></book_author>
         </book>
-        <book book_id="12347">
+        <book book_id="A12347">
             <title>Do latarni morskiej</title>
             <pages>200</pages>
             <year>2016</year>
             <isbn>12312312989</isbn>
-            <book_publisher pub_id="16A"></book_publisher>
+            <book_publisher pub_id="A16A"></book_publisher>
             <book_author aut_id="VIR"></book_author>
         </book>
     </books>
 
     <borrowings>
         <borrowing bor_id="Q1">
-            <borrowed_book id_book="12345"></borrowed_book>
-            <borrowing_user id_user="223123"></borrowing_user>
-            <worker id_librarian="1232"></worker>
+            <borrowed_book id_book="A12345"></borrowed_book>
+            <borrowing_user id_user="A223123"></borrowing_user>
+            <worker id_librarian="A1232"></worker>
         </borrowing>
         <borrowing bor_id="Q2">
-            <borrowed_book id_book="12346"></borrowed_book>
-            <borrowing_user id_user="223123"></borrowing_user>
-            <worker id_librarian="1232"></worker>
+            <borrowed_book id_book="A12346"></borrowed_book>
+            <borrowing_user id_user="A223123"></borrowing_user>
+            <worker id_librarian="A1232"></worker>
         </borrowing>
         <borrowing bor_id="Q3">
-            <borrowed_book id_book="12347"></borrowed_book>
-            <borrowing_user id_user="434321"></borrowing_user>
-            <worker id_librarian="1212"></worker>
+            <borrowed_book id_book="A12347"></borrowed_book>
+            <borrowing_user id_user="A434321"></borrowing_user>
+            <worker id_librarian="A1212"></worker>
         </borrowing>
     </borrowings>
 </library>
