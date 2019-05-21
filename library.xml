@@ -14,8 +14,8 @@
                 <country>Polska</country>
             </address>
         </customer>
-        <customer customer_id="A434321">
-            <firstname>Darek</firstname>
+        <customer customer_id="B434321">
+            <firstname>Jola</firstname>
             <lastname>Raciborek</lastname>
             <phone>123123123</phone>
             <address>
@@ -36,7 +36,7 @@
                 <country>Polska</country>
             </address>
         </librarian>
-        <librarian librarian_id="A1212">
+        <librarian librarian_id="B1212">
             <firstname>Anna</firstname>
             <lastname>Nowak</lastname>
             <phone>989809900</phone>
@@ -119,8 +119,8 @@
         </borrowing>
         <borrowing bor_id="Q3">
             <borrowed_book id_book="A12347"></borrowed_book>
-            <borrowing_user id_user="A434321"></borrowing_user>
-            <worker id_librarian="A1212"></worker>
+            <borrowing_user id_user="B434321"></borrowing_user>
+            <worker id_librarian="B1212"></worker>
         </borrowing>
     </borrowings>
 </library>

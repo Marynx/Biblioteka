@@ -3,7 +3,7 @@
     <xs:attribute name="customer_id">
         <xs:simpleType>
             <xs:restriction base="xs:string">
-                <xs:pattern value="A[0-9]{6}"></xs:pattern>
+                <xs:pattern value="A[0-9]{6}|B[0-9]{6}"></xs:pattern>
             </xs:restriction>
         </xs:simpleType>
     </xs:attribute>
@@ -11,7 +11,7 @@
     <xs:attribute name="librarian_id">
         <xs:simpleType>
             <xs:restriction base="xs:string">
-                <xs:pattern value="A[0-9]{4}"></xs:pattern>
+                <xs:pattern value="A[0-9]{4}|B[0-9]{4}"></xs:pattern>
             </xs:restriction>
         </xs:simpleType>
     </xs:attribute>
@@ -80,13 +80,13 @@
 
     <xs:simpleType name="id_customer_type">
         <xs:restriction base="xs:string">
-            <xs:pattern value="A[0-9]{6}"></xs:pattern>
+            <xs:pattern value="A[0-9]{6}|B[0-9]{6}"></xs:pattern>
         </xs:restriction>
     </xs:simpleType>
 
     <xs:simpleType name="id_librarian_type">
         <xs:restriction base="xs:string">
-            <xs:pattern value="A[0-9]{4}"></xs:pattern>
+            <xs:pattern value="A[0-9]{4}|B[0-9]{4}"></xs:pattern>
         </xs:restriction>
     </xs:simpleType>
 
