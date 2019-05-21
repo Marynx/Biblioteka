@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:attribute name="customer_id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="A[0-9]{6}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="librarian_id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="A[0-9]{4}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="publisher_id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="A[0-9]{2}[A-Z]"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="author_id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]{3}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="book_id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z][0-9]{5}"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="bor_id">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z][0-9]"></xs:pattern>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:simpleType name="street_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-zA-z]+ \d+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="letter_big_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-zA-Z]+"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="phone_type">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:pattern value="[0-9]{9}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="isbn_type">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:pattern value="[0-9]{11}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="id_book_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][0-9]{5}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="id_customer_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="A[0-9]{6}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="id_librarian_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="A[0-9]{4}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="id_author_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{3}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="id_publisher_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="A[0-9]{2}[A-Z]"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="id_borrowing_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][0-9]"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="type_address">
+        <xs:sequence>
+            <xs:element name="street" type="street_type"></xs:element>
+            <xs:element name="city" type="letter_big_type"></xs:element>
+            <xs:element name="country" type="letter_big_type"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="customer_type">
+        <xs:sequence>
+            <xs:element name="firstname" type="letter_big_type"></xs:element>
+            <xs:element name="lastname" type="letter_big_type"></xs:element>
+            <xs:element name="phone" type="phone_type"></xs:element>
+            <xs:element name="address" type="type_address"></xs:element>
+        </xs:sequence>
+        <xs:attribute ref="customer_id"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="customers_type">
+        <xs:sequence>
+            <xs:element name="customer" type="customer_type" minOccurs="2" maxOccurs="15"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="librarian_type">
+        <xs:sequence>
+            <xs:element name="firstname" type="letter_big_type"></xs:element>
+            <xs:element name="lastname" type="letter_big_type"></xs:element>
+            <xs:element name="phone" type="phone_type"></xs:element>
+            <xs:element name="address" type="type_address"></xs:element>
+        </xs:sequence>
+        <xs:attribute ref="librarian_id"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="librarians_type">
+        <xs:sequence>
+            <xs:element name="librarian" type="librarian_type" minOccurs="1" maxOccurs="4"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="users_type">
+        <xs:sequence>
+            <xs:element name="customers" type="customers_type"></xs:element>
+            <xs:element name="librarians" type="librarians_type"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="publisher_type">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"></xs:element>
+            <xs:element name="country" type="letter_big_type"></xs:element>
+        </xs:sequence>
+        <xs:attribute ref="publisher_id"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="publishers_type">
+        <xs:sequence>
+            <xs:element name="publisher" type="publisher_type" minOccurs="1" maxOccurs="4"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="author_type">
+        <xs:sequence>
+            <xs:element name="firstname" type="letter_big_type"></xs:element>
+            <xs:element name="lastname" type="letter_big_type"></xs:element>
+            <xs:element name="country" type="letter_big_type"></xs:element>
+        </xs:sequence>
+        <xs:attribute ref="author_id"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="authors_type">
+        <xs:sequence>
+            <xs:element name="author" type="author_type" minOccurs="1" maxOccurs="4"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="book_type">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string"></xs:element>
+            <xs:element name="pages" type="xs:positiveInteger"></xs:element>
+            <xs:element name="year" type="xs:gYear"></xs:element>
+            <xs:element name="isbn" type="isbn_type"></xs:element>
+            <xs:element name="book_publisher">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="id_publisher_type" name="pub_id"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="book_author">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="id_author_type" name="aut_id"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute ref="book_id"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="books_type">
+        <xs:sequence>
+            <xs:element name="book" type="book_type" minOccurs="1" maxOccurs="4"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="borrowing_type">
+        <xs:sequence>
+            <xs:element name="borrowed_book" >
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="id_book_type" name="id_book"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="borrowing_user" >
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="id_customer_type" name="id_user"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="worker">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute type="id_librarian_type" name="id_librarian"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute ref="bor_id"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="borrowings_type">
+        <xs:sequence>
+            <xs:element name="borrowing" type="borrowing_type" minOccurs="1" maxOccurs="4"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="type_library">
+        <xs:sequence>
+            <xs:element name="users" type="users_type"></xs:element>
+            <xs:element name="publishers" type="publishers_type"></xs:element>
+            <xs:element name="authors" type="authors_type"></xs:element>
+            <xs:element name="books" type="books_type"></xs:element>
+            <xs:element name="borrowings" type="borrowings_type"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="library" type="type_library">
+        <xs:key name="publisher_key">
+            <xs:selector xpath=".//publishers/publisher"></xs:selector>
+            <xs:field xpath="@publisher_id"></xs:field>
+        </xs:key>
+        <xs:keyref name="publisher_key_ref" refer="publisher_key">
+            <xs:selector xpath=".//books/book/book_publisher"></xs:selector>
+            <xs:field xpath="@pub_id"></xs:field>
+        </xs:keyref>
+
+        <xs:key name="author_key">
+            <xs:selector xpath=".//authors/author"></xs:selector>
+            <xs:field xpath="@author_id"></xs:field>
+        </xs:key>
+        <xs:keyref name="author_key_ref" refer="author_key">
+            <xs:selector xpath=".//books/book/book_author"></xs:selector>
+            <xs:field xpath="@aut_id"></xs:field>
+        </xs:keyref>
+
+
+        <xs:key name="book_key">
+            <xs:selector xpath=".//books/book"></xs:selector>
+            <xs:field xpath="@book_id"></xs:field>
+        </xs:key>
+        <xs:keyref name="book_key_ref" refer="book_key">
+            <xs:selector xpath=".//borrowings/borrowing/borrowed_book"></xs:selector>
+            <xs:field xpath="@id_book"></xs:field>
+        </xs:keyref>
+
+        <xs:key name="customer_key">
+            <xs:selector xpath=".//users/customers/customer"></xs:selector>
+            <xs:field xpath="@customer_id"></xs:field>
+        </xs:key>
+        <xs:keyref name="customer_key_ref" refer="customer_key">
+            <xs:selector xpath=".//borrowings/borrowing/borrowing_user"></xs:selector>
+            <xs:field xpath="@id_user"></xs:field>
+        </xs:keyref>
+
+        <xs:key name="librarian_key">
+            <xs:selector xpath=".//users/librarians/librarian"></xs:selector>
+            <xs:field xpath="@librarian_id"></xs:field>
+        </xs:key>
+        <xs:keyref name="librarian_key_ref" refer="librarian_key">
+            <xs:selector xpath=".//borrowings/borrowing/worker"></xs:selector>
+            <xs:field xpath="@id_librarian"></xs:field>
+        </xs:keyref>
+    </xs:element>
+</xs:schema>
