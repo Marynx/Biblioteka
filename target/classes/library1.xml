@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<library> 
+  <users> 
+    <customers> 
+      <customer customer_id="A223123"> 
+        <firstname>Arek</firstname>  
+        <lastname>Raciborek</lastname>  
+        <phone>123123123</phone>  
+        <address> 
+          <street>Wilmowska 12</street>  
+          <city>Gdansk</city>  
+          <country>Polska</country> 
+        </address> 
+      </customer>  
+      <customer customer_id="B434321"> 
+        <firstname>Jola</firstname>  
+        <lastname>Raciborek</lastname>  
+        <phone>123123123</phone>  
+        <address> 
+          <street>Wilmowska 43</street>  
+          <city>Gdansk</city>  
+          <country>Polska</country> 
+        </address> 
+      </customer>  
+      <customer customer_id="sadas"> 
+        <firstname>Mirek</firstname>  
+        <lastname>sd</lastname>  
+        <phone>asd</phone>  
+        <address> 
+          <street>sad</street>  
+          <city>ads</city>  
+          <country>as</country> 
+        </address> 
+      </customer>  
+      <customer customer_id="z"> 
+        <firstname>Zuza</firstname>  
+        <lastname>z</lastname>  
+        <phone>z</phone>  
+        <address> 
+          <street>z</street>  
+          <city>z</city>  
+          <country>z</country> 
+        </address> 
+      </customer>  
+      <customer customer_id="a"> 
+        <firstname>Andrzej</firstname>  
+        <lastname>a</lastname>  
+        <phone>a</phone>  
+        <address> 
+          <street>a</street>  
+          <city>a</city>  
+          <country>a</country> 
+        </address> 
+      </customer> 
+    </customers>  
+    <librarians> 
+      <librarian librarian_id="A1232"> 
+        <firstname>Jan</firstname>  
+        <lastname>Kowal</lastname>  
+        <phone>321321321</phone>  
+        <address> 
+          <street>Jagodowa 32</street>  
+          <city>Gdansk</city>  
+          <country>Polska</country> 
+        </address> 
+      </librarian>  
+      <librarian librarian_id="B1212"> 
+        <firstname>Anna</firstname>  
+        <lastname>Nowak</lastname>  
+        <phone>989809900</phone>  
+        <address> 
+          <street>Nowakowa 2</street>  
+          <city>Gdynia</city>  
+          <country>Polska</country> 
+        </address> 
+      </librarian> 
+    </librarians> 
+  </users>  
+  <publishers> 
+    <publisher publisher_id="A12A"> 
+      <name>Muza</name>  
+      <country>Polska</country> 
+    </publisher>  
+    <publisher publisher_id="A14A"> 
+      <name>Greg</name>  
+      <country>Polska</country> 
+    </publisher>  
+    <publisher publisher_id="A16A"> 
+      <name>W.A.B</name>  
+      <country>Rosja</country> 
+    </publisher> 
+  </publishers>  
+  <authors> 
+    <author author_id="FIO"> 
+      <firstname>Fiodor</firstname>  
+      <lastname>Dostojewski</lastname>  
+      <country>Rosja</country> 
+    </author>  
+    <author author_id="VLA"> 
+      <firstname>Vladimir</firstname>  
+      <lastname>Nabokov</lastname>  
+      <country>Rosja</country> 
+    </author>  
+    <author author_id="VIR"> 
+      <firstname>Virginia</firstname>  
+      <lastname>Woolf</lastname>  
+      <country>Anglia</country> 
+    </author> 
+  </authors>  
+  <books> 
+    <book book_id="A12345"> 
+      <title>Zbrodnia i Kara</title>  
+      <pages>400</pages>  
+      <year>2008</year>  
+      <isbn>12312312312</isbn>  
+      <book_publisher pub_id="A12A"/>  
+      <book_author aut_id="FIO"/> 
+    </book>  
+    <book book_id="A12346"> 
+      <title>Lolita</title>  
+      <pages>416</pages>  
+      <year>2012</year>  
+      <isbn>12312312345</isbn>  
+      <book_publisher pub_id="A14A"/>  
+      <book_author aut_id="VLA"/> 
+    </book>  
+    <book book_id="A12347"> 
+      <title>Do latarni morskiej</title>  
+      <pages>200</pages>  
+      <year>2016</year>  
+      <isbn>12312312989</isbn>  
+      <book_publisher pub_id="A16A"/>  
+      <book_author aut_id="VIR"/> 
+    </book> 
+  </books>  
+  <borrowings> 
+    <borrowing bor_id="Q1"> 
+      <borrowed_book id_book="A12345"/>  
+      <borrowing_user id_user="A223123"/>  
+      <worker id_librarian="A1232"/> 
+    </borrowing>  
+    <borrowing bor_id="Q2"> 
+      <borrowed_book id_book="A12346"/>  
+      <borrowing_user id_user="A223123"/>  
+      <worker id_librarian="A1232"/> 
+    </borrowing>  
+    <borrowing bor_id="Q3"> 
+      <borrowed_book id_book="A12347"/>  
+      <borrowing_user id_user="B434321"/>  
+      <worker id_librarian="B1212"/> 
+    </borrowing> 
+  </borrowings> 
+</library>
